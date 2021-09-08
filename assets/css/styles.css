@@ -342,6 +342,7 @@ img{
   transition: 1s;
   vertical-align: middle;
   padding: 5rem;
+  text-align: center;
 }
 .work__img h2:hover{
   transform: scale(1.1);
