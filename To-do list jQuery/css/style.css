@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bgcolor); 
+}
+:root{
+  --bgcolor: orange;
+}
+h1{
+  background-color: #1abc9c;
+  padding: 10px;
+}
+input[type=text]{
+  padding: 7px;
+  border-radius: 4px;
+}
+.rem {
+  margin-left: 5px;
+  background-color: white;
+  color: red;
+  border: none;
+  cursor: pointer;
+}
+ol li {
+  border: solid;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  color: white;
+}
