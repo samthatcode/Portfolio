@@ -225,8 +225,8 @@ img{
   position: absolute;
   right: 0;
   bottom: 0;
-  top: 16rem;
-  width: 280px;
+  top: 18rem;
+  width: 250px;
 }
 img{
   border-radius: 5px;
@@ -496,14 +496,12 @@ Go Up
     margin-right: var(--mb-4);
   }
   .home__img{
-    /* width: 300px; */
     margin-top: -150px;
-
     bottom: 15%;
   }
   .home__img img{
     width: 300px;
-    margin-left: -50px;
+    margin-left: -20px;
   }
 
   .about__container, .skills__container{
