@@ -113,6 +113,7 @@ img{
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
 }
+
 .l-header{
   width: 100%;
   position: fixed;
@@ -215,7 +216,7 @@ img{
 .home__social-icon{
   width: max-content;
   margin-bottom: var(--mb-2);
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--second-color);
 }
 .home__social-icon:hover{
@@ -227,6 +228,7 @@ img{
   bottom: 0;
   top: 18rem;
   width: 250px;
+  justify-self: center;
 }
 img{
   border-radius: 5px;
@@ -335,14 +337,17 @@ img{
   box-shadow: 0 4px 25px rgba(14,36,49,.15);
   border-radius: .5rem;
   overflow: hidden;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   
 }
 .work__img h2{
   transition: 1s;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   padding: 5rem;
   text-align: center;
+  text-transform: uppercase;
 
 }
 .work__img h2:hover{
@@ -370,16 +375,20 @@ img{
   margin-left: auto;
 }
 
+.contact__container textarea {
+  resize: none;
+}
+
 /* ===== FOOTER =====*/
 .footer{
-  background-color: var(--second-color);
+  background-color: rgba(66, 62, 62, 0.952);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
 }
 .footer__title{
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: var(--mb-4);
 }
 .footer__social{
@@ -390,30 +399,48 @@ img{
   color: #fff;
   margin: 0 var(--mb-2)
 }
+.footer__icon:hover {
+  color: var(--first-color);
+}
+
+/* Form Validation CSS below the footer */
+
+.error {
+  color: red;
+  margin-left: 5px;
+}
+
+label.error {
+  display: inline;
+}
 /*
 ======================
 Go Up
 ======================
 */
-.goto-top:link,
-.goto-top:visited {
-  position: fixed;
-  right: 2%;
-  bottom: 10%;
-  padding: 0.8rem 1.4rem;
-  border-radius: 1rem;
-  background-color: var(--orange);
-  visibility: hidden;
-  cursor: pointer;
-  transition: 0.3s;
-  animation: bounce 2s ease-in-out infinite;
+#myBtn {
+  /* display: none; Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 15px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: -5px; /* Some padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 20px; /* Increase font size */
+  animation: bounce 1.5s ease-in-out infinite;;
 }
 
-.show-top:link,
-.show-top:visited {
-  visibility: visible;
-  z-index: 1999;
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }
+
+
+
 
 @keyframes bounce {
   0% {
@@ -429,21 +456,10 @@ Go Up
   }
 }
 
-.goto-top svg {
-  width: 1.3rem;
-  height: 1.3rem;
-  fill: var(--white);
-}
-
-.goto-top:hover {
-  background-color: var(--black4);
-}
-
-
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 768px){
   body{
-    margin: 0;
+    margin: 20px;
   }
   .section{
     padding-top: 4rem;
@@ -476,11 +492,11 @@ Go Up
   }
 
   .home{
-    height: 100vh;
+    height: 90vh;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     text-align: initial;
-    margin-top: 50px;
+    margin: 50px 0 -150px 0;
   }
   .home__data{
     align-self: flex-start;
@@ -490,20 +506,23 @@ Go Up
   .home__social{
     padding-top: 0;
     padding-bottom: 2.5rem;
+    margin: 4rem -15rem 5rem -21rem;
     flex-direction: row;
     align-self: flex-end;
   }
   .home__social-icon{
-    margin-bottom: 0;
+    /* margin-bottom: 8rem; */
+    font-size: 3rem;
     margin-right: var(--mb-4);
   }
   .home__img{
     margin-top: -150px;
+    margin-right: -200px;
     bottom: 15%;
   }
   .home__img img{
     width: 300px;
-    margin-left: -20px;
+    margin-left: -300px;
   }
 
   .about__container, .skills__container{
@@ -525,11 +544,7 @@ Go Up
   .contact__container{
     justify-items: center;
   }
-  .goto-top:link,
-  .goto-top:visited {
-    right: 5%;
-    bottom: 5%;
-  }
+  
 }
 
 @media screen and (min-width: 1024px){
@@ -538,6 +553,7 @@ Go Up
     margin-right: auto;
   }
   .home__img{
-    right: -10%;
+    right: 10%;
   }
+ 
 }
