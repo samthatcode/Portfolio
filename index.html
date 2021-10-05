@@ -9,12 +9,15 @@
 
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet' />
-    
+
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- jQUERY CDN LINK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
     <title>Portfolio</title>
@@ -35,7 +38,9 @@
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+
                 </ul>
+
             </div>
 
             <div class="nav__toggle" id="nav-toggle">
@@ -51,7 +56,7 @@
                 <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Samuel</span><br>Front-End <br> Web
                     Developer</h1>
 
-                <a href="./assets/Samuel-OSHO CV.pdf" class="button" download="Samuel-OSHO CV">Download CV</a>
+                <a href="./assets/Samuel-OSHO CV.pdf" class="button" download="Samuel-OSHO CV">&#9660 Download CV</a>
             </div>
 
             <div class="home__social">
@@ -194,10 +199,11 @@
                     <a href="./coffee website/index.html">
                         <h2>RESPONSIVE WEBSITE</h2>
                     </a>
+
                 </div>
                 <div class="work__img">
                     <a href="./To-do list jQuery/index.html">
-                        <h2>ToDo List</h2>
+                        <h2>To-Do List</h2>
                     </a>
                 </div>
                 <div class="work__img">
@@ -248,11 +254,15 @@
             <h2 class="section-title">Contact Me</h2>
 
             <div class="contact__container bd-grid">
-                <form action="" class="contact__form">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="mail" placeholder="Email" class="contact__input">
-                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                    <input type="button" value="Send" class="contact__button button">
+                <form action="http://samthatcode@gmail.com/form-to-email.php" class="contact__form" id="contact__form">
+                    <input type="text" placeholder="Your name" id="name" name="name" class="contact__input" />
+
+                    <input type="email" placeholder="Your email" id="email" name="email" class="contact__input" />
+
+                    <textarea placeholder="Your message..." id="text" name="text" cols="0" rows="10"
+                        class="contact__input">
+                    </textarea>
+                    <input type="submit" value="Send" class="contact__button button" onclick="submit()" />
                 </form>
             </div>
         </section>
@@ -260,25 +270,44 @@
 
     <!--===== FOOTER =====-->
     <footer class="footer">
-        <p class="footer__title">DevSam</p>
+        <p class="footer__title">Reach out to me on WhatsApp or Call us <br><br>
+            <a href="https://wa.me/2347063305295" target="_blank" class="footer__icon">
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+            <a href="tel:+2347063305295" class="footer__icon">
+                <i class='bx bx-phone-call'></i>
+            </a>
+
+        </p>
+
         <div class="footer__social">
+            <hr>
             <a href="https://web.facebook.com/samuel.osho.5245/" class="footer__icon"><i
                     class='bx bxl-facebook'></i></a>
             <a href="https://twitter.com/samthatcode/" class="footer__icon"><i class='bx bxl-github'></i></a>
             <a href="https://twitter.com/samthatcode/" class="footer__icon"><i class='bx bxl-twitter'></i></a>
             <a href="http://www.linkedin.com/in/samuel-osho-574808189/" class="footer__icon"><i
                     class='bx bxl-linkedin'></i></a>
+            <hr>
         </div>
-        <p>&#169; 2021 Dev Sam | All Right Reserved</p>
+        <p>
+            &#169; <span id="currentYear"></span> Dev Sam | All Right Reserved
+            <!-- <script>document.write (new Date().getFullYear());</script> -->
+        </p>
     </footer>
+
 
     <!-- Go To -->
 
-    <a href="#header" class="goto-top scroll-link">
-        <svg>
-            <use xlink:href="./img/sprite.svg#icon-arrow-up"></use>
-        </svg>
-    </a>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593</button>
+
+    <!-- jQUERY LINK -->
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- jQUERY VALIDATION PLUGGIN  -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+
     <!--===== MAIN JS =====-->
     <script src="assets/js/script.js"></script>
 </body>
