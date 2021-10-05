@@ -123,17 +123,13 @@ $(document).ready(function () {
 //Get the button:
 var mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 40px from the top of the document, show the button
 window.onscroll = function () {
     scrollFunction()
 };
 
 function scrollFunction() {
-<<<<<<< HEAD
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-=======
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
->>>>>>> d1177f7032c21fbf65465630c5e556ca4e38cc10
         mybutton.style.display = "block";
     } else {
         mybutton.style.display = "none";
