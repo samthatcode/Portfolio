@@ -1,7 +1,7 @@
 /*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId)
+    const toggle = document.getElementById(toggleId);
+    const nav = document.getElementById(navId);
 
     if (toggle && nav) {
         toggle.addEventListener('click', () => {
@@ -142,7 +142,8 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-/* Footer date */
+/* 
+// Footer date 
 
 window.onload = function () {
     //gets the year and put it in a variable
@@ -153,8 +154,9 @@ window.onload = function () {
 
     //convert the variable into a node
     let e = document.createTextNode(currentYear);
-    
+
     //add the node to the empty span tag
     d.appendChild(e);
 
 };
+*/
